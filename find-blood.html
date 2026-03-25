@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Blood - Blood Donation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="find-blood.html" class="active">Find Blood</a></li>
+                <li class="dropdown">
+                    <a href="register.html">Register Now ▾</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login-btn">Log In</button>
+        </div>
+    </header>
+
+    <div class="find-container">
+        <div class="find-card">
+            <div class="left-gradient">
+                <div class="circle-design"></div>
+            </div> 
+            
+            <div class="right-content">
+                <h3>Recipient Details</h3>
+                
+                <div class="input-group">
+                    <label>Blood Group</label>
+                    <select>
+                        <option>Select</option>
+                        <option>A+</option>
+                        <option>B+</option>
+                        <option>O+</option>
+                        <option>AB+</option>
+                    </select>
+                </div>
+
+                <button class="location-btn">Current Location</button>
+                <p class="or-text">OR</p>
+
+                <div class="input-group">
+                    <label>State</label>
+                    <select>
+                        <option>Select State</option>
+                        <option>Yangon</option>
+                        <option>Mandalay</option>
+                        <option>Kachin</option>
+                        <option>Sagaing</option>
+                        <option>Shan</option>
+                        <option>Magway</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+    <label>District</label>
+    <select name="district">
+        <option value="" disabled selected>Select District</option>
+        <option value="north">Yangon (North)</option>
+        <option value="south">Yangon (South)</option>
+        <option value="east">Yangon (East)</option>
+        <option value="west">Yangon (West)</option>
+    </select>
+</div>
+
+                <button class="proceed-btn" onclick="window.location.href='donor-list.html'">Proceed ❯</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

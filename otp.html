@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>OTP Verification</h2>
+        </div>
+        
+        <form class="otp-form">
+            <div class="otp-input-container">
+    <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 0)">
+    <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 1)">
+    <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 2)">
+    <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 3)">
+</div>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="verifyOTP()">Verify OTP</button>
+            
+            <p class="resend-text">
+    Didn't receive code? 
+    <span id="timer-text">Resend in <b id="seconds">60</b>s</span>
+    <a href="#" id="resend-link" style="display: none;" onclick="resendOTP()">Resend OTP</a>
+</p>
+        </form>
+    </div>
+
+    <script>
+        function verifyOTP() {
+            // This is a dummy verification
+            alert("OTP Verified Successfully!");
+            window.location.href = 'index.html'; // Go back to home or dashboard
+        }
+
+        // Auto focus to next input box logic
+        const inputs = document.querySelectorAll('.otp-box');
+        inputs.forEach((input, index) => {
+            input.onkeyup = (e) => {
+                if (input.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            };
+        });
+        // --- Timer Logic အသစ် ---
+    let timeLeft = 60;
+    const secondsDisplay = document.getElementById("seconds");
+    const timerSpan = document.getElementById("timer-text");
+    const resendLink = document.getElementById("resend-link");
+
+    const timer = setInterval(() => {
+        timeLeft--;
+        if(secondsDisplay) secondsDisplay.innerText = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            if(timerSpan) timerSpan.style.display = "none";
+            if(resendLink) resendLink.style.display = "inline";
+        }
+    }, 1000);
+
+    function resendOTP() {
+        alert("OTP has been resent!");
+        location.reload(); 
+    }
+    </script>
+</body>
+</html>

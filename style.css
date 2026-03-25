@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.active {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.login-btn {
+    padding: 10px 25px;
+    border: 1px solid #333;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* စာသားကို ညာဘက်ပို့ထားတာပါ */
+    padding-right: 10%;
+    overflow: hidden;
+}
+
+/* ဘယ်ဘက်က အနီရောင် Shape */
+.hero-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(135deg, #800020 0%, #a3002d 100%);
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%); /* အစောင်းဒီဇိုင်း */
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 500px;
+    text-align: right;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #333;
+}
+
+.hero-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    padding: 15px 35px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+/* OTP Page Styling */
+.otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.otp-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+.otp-box h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.otp-box p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.otp-inputs input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.otp-inputs input:focus {
+    border-color: #a3002d;
+    box-shadow: 0 0 5px rgba(163, 0, 45, 0.3);
+}
+
+.timer {
+    color: #28a745;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.verify-btn {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* Form တစ်ခုလုံးကို အလယ်ပို့ပေးတာ */
+body {
+    background-color: #f8f9fa; /* နောက်ခံကို မီးခိုးဖျော့ရောင်လေးထားမယ် */
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* ခေါင်းစဉ် အနီရောင် Gradient အကွက် */
+.form-header {
+    background: linear-gradient(90deg, #800020 0%, #a3002d 100%);
+    color: white;
+    padding: 30px;
+}
+
+.reg-form {
+    padding: 40px;
+}
+
+/* Input အကွက်လေးတွေ စီစဉ်တာ */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.row {
+    display: flex;
+    gap: 20px; /* ဘေးချင်းကပ် အကွက်ကြား အကွာအဝေး */
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Submit ခလုတ်ကို ညာဘက်အောက်မှာ လှလှလေးထားမယ် */
+.submit-btn {
+    float: right;
+    background: black;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* style.css ရဲ့ အောက်ဆုံးမှာ ဒါလေး ကူးထည့်လိုက်ပါ */
+
+.submit-btn {
+    background: linear-gradient(90deg, #333, #000); /* ခလုတ်ကို အမည်းရောင် Gradient စပ်ပေးတာပါ */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s; /* ပြောင်းလဲမှုတွေကို ငြိမ်ငြိမ်လေး ဖြစ်စေတယ် */
+}
+
+.submit-btn:hover {
+    transform: scale(1.05); /* Mouse တင်လိုက်တဲ့အခါ ခလုတ်လေး နဲနဲ ကြီးလာပါလိမ့်မယ် */
+}
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+    .row {
+        flex-direction: column; /* ဖုန်းမှာဆိုရင် ဘေးချင်းကပ်အကွက်တွေကို အပေါ်အောက် ပြောင်းပေးမယ် */
+        gap: 0;
+    }
+}
+/* Find Blood Page Styling */
+.find-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.find-card {
+    display: flex;
+    width: 850px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.left-gradient {
+    flex: 1;
+    background: radial-gradient(circle, #a3002d, #5a0016);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* အလယ်က စက်ဝိုင်းပုံစံ ဒီဇိုင်းလေး */
+.circle-design {
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.right-content {
+    flex: 1.2;
+    padding: 50px;
+}
+
+.right-content h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.location-btn {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.or-text {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin: 10px 0;
+}
+
+.proceed-btn {
+    width: 120px;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.proceed-btn {
+    background: linear-gradient(90deg, #333, #000); /* အမည်းရောင် Gradient */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.proceed-btn:hover {
+    background: #a3002d; /* Mouse တင်ရင် အနီရောင် ပြောင်းသွားမယ် */
+}
+/* Find Blood Page က Dropdown Box လေးတွေအတွက် */
+.right-content select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    appearance: none; /* Browser ရဲ့ မူရင်း Dropdown ပုံစံကို ဖျောက်တာပါ */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="%23333" d="M0 3l5 5 5-5z"/></svg>'); /* မြှားခေါင်းလေး ထည့်တာပါ */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    cursor: pointer;
+}
+
+.right-content select:focus {
+    outline: none;
+    border-color: #a3002d; /* Click လိုက်ရင် အနီရောင်ဘောင်လေး ပြောင်းသွားမယ် */
+}
+
+/* Input Group တစ်ခုချင်းစီကြား အကွာအဝေး */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+.list-container {
+    padding: 50px 8%;
+}
+
+.list-container h3 {
+    margin-bottom: 25px;
+    color: #a3002d;
+}
+
+.donor-table {
+    width: 100%;
+    border-collapse: collapse; /* ဘောင်တွေကို တစ်ထပ်တည်းဖြစ်အောင် လုပ်တာ */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.donor-table th, .donor-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.donor-table th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+}
+
+.b-group {
+    color: #a3002d;
+    font-weight: bold;
+}
+
+.call-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.call-btn:hover {
+    background: #218838;
+}
+/* Screen အကျယ် 768px ထက် ငယ်သွားရင် (ဖုန်းတွေမှာ) ဒီ style တွေ အလုပ်လုပ်မယ် */
+@media (max-width: 768px) {
+    
+    /* Navigation Bar ကို ပုံစံပြောင်းမယ် */
+    nav ul {
+        display: none; /* လောလောဆယ် Menu ကို ဖျောက်ထားမယ် (Hamburger menu လုပ်ဖို့အတွက်) */
+    }
+
+    /* Hero Section (Home Page) ကို ဖုန်းနဲ့စာအောင် ညှိမယ် */
+    .hero {
+        flex-direction: column; /* စာနဲ့ ပုံကို အပေါ်အောက် ထားမယ် */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-shape {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Form Container တွေကို ဖုန်း screen အပြည့်နီးပါး ချဲ့မယ် */
+    .form-container, .find-card {
+        width: 95%;
+        flex-direction: column; /* ဘေးတိုက်ကနေ အပေါ်အောက် ပြောင်းမယ် */
+        margin: 10px auto;
+    }
+
+    .left-gradient {
+        height: 150px; /* Find Blood page က gradient အကွက်ကို အမြင့်လျှော့မယ် */
+    }
+
+    /* Table (Donor List) ကို ဖုန်းမှာကြည့်ရတာ အဆင်ပြေအောင်လုပ်မယ် */
+    .donor-table {
+        display: block;
+        overflow-x: auto; /* ဘေးတိုက် scroll ဆွဲလို့ရအောင် လုပ်မယ် */
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+/* OTP box လေးများကို အလယ်တွင် စုစည်းပေးမည့် Container */
+.otp-input-container {
+    display: flex;
+    justify-content: center; /* Box များကို ဗဟိုတွင် စုပေးရန် */
+    gap: 15px;               /* Box တစ်ခုနှင့်တစ်ခုကြား အကွာအဝေး */
+    margin: 30px 0;          /* အပေါ်နှင့်အောက် အကွာအဝေး */
+}
+
+/* OTP Input Box တစ်ခုချင်းစီ၏ ပုံစံ */
+.otp-input {
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease; /* အရောင်ပြောင်းလျှင် ငြိမ်ငြိမ်လေးပြောင်းရန် */
+}
+
+/* Box ထဲတွင် Mouse ထောက်ထားချိန် သို့မဟုတ် ရိုက်နေချိန် ပုံစံ */
+.otp-input:focus {
+    border-color: #7a1b28; /* Blood Donation Theme အနီရင့်ရောင် */
+    box-shadow: 0 0 8px rgba(122, 27, 40, 0.2);
+    outline: none;
+    background-color: #fff;
+}
+
+/* Submit Button ပုံစံ */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #1a252f;
+}
+
+.resend-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+#resend-link {
+    color: #7a1b28; /* Blood donation theme color */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#timer-text {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100px !important; /* ၁၀၀ အထိ တိုးလိုက်ပါပြီ */
+    width: auto;
+    background: none !important; /* နောက်ခံအရောင် လုံးဝမပါအောင်ပါ */
+    display: block;
+}
+
+header {
+    height: 120px; /* Logo ကြီးလာတဲ့အတွက် Header ကိုလည်း နည်းနည်း ချဲ့ပေးရပါမယ် */
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;          /* ပုံနဲ့ စာသားကို ဘေးချင်းယှဉ်စေဖို့ပါ */
+    align-items: center;    /* ပုံနဲ့ စာသားကို အလယ်ဗဟိုမှာ ညီစေဖို့ပါ */
+    text-decoration: none;  /* စာသားအောက်က မျဉ်းကြောင်းကို ဖျောက်ဖို့ပါ */
+    gap: 12px;              /* ပုံနဲ့ စာသားကြား အကွာအဝေးပါ */
+}
+
+.logo-text {
+    font-size: 18px;        /* စာလုံးအရွယ်အစားပါ */
+    font-weight: bold;      /* စာလုံးအထူပါ */
+    color: #090303;         /* စာသားအရောင်ကို အနီရင့်ရောင် ထားထားပါတယ် */
+    font-family: sans-serif;
+}
